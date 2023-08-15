@@ -4,10 +4,12 @@ package livro;
 public class Emprestimo {
     String data_emprestimo;
     String data_devolucao;
+    boolean emprestado;
 
     //Contrutor da classe
-    public Emprestimo (String data_emprestimo,String data_devolucao) {
+    public Emprestimo (String data_emprestimo,String data_devolucao,boolean emprestado) {
         this.data_devolucao = data_devolucao;
         this.data_emprestimo = data_emprestimo;
+        this.emprestado = false;
     }
 }
