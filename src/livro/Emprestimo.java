@@ -12,4 +12,11 @@ public class Emprestimo {
         this.data_emprestimo = data_emprestimo;
         this.emprestado = false;
     }
+	public String get_Data_devolucao() {
+		return data_devolucao;
+	}
+	
+	public String get_Data_emprestimo() {
+		return data_emprestimo;
+	}
 }
