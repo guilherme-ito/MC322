@@ -3,7 +3,7 @@ import livro.Emprestimo;
 
 public class Livro {
 
-    //Atributos da classe
+    //Atributos da classe opa
     private String autor;
     private String titulo;
     private int edicao;
