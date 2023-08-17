@@ -1,6 +1,6 @@
 package livro;
 import livro.Emprestimo;
-//testando 123
+
 public class Livro {
 
     //Atributos da classe 
