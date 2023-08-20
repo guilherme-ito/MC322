@@ -11,6 +11,10 @@ public class Funcionario {
         this.nome = nome;
         this.cargo = cargo;
     }
+    //Métodos
+    public void identificaçãoFuncionario() {
+    	System.out.println("Funcionário:"+ this.getNome()+" Cargo:"+ this.getCargo());
+    }
     
     //Getters da classe
     

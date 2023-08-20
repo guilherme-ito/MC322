@@ -15,6 +15,12 @@ public class Usuario {
         this.registro = registro;
         this.CPF = CPF;
     }
+    //métodos
+    
+    public void reciboUsuario() {
+    	System.out.println("Você acaba de adquirir o livro"+ this.livro.getTitulo()+
+    			", por favor devolva até o dia "+ this.livro.getEmprestimo().getData_devolucao()+",bom proveito!");
+    	}
     
     //Getters da classe
     

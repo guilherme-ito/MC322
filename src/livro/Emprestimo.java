@@ -2,8 +2,8 @@ package livro;
 
     //Atributos da classe
 public class Emprestimo {
-    String data_emprestimo;
-    String data_devolucao;
+    private String data_emprestimo;
+    private String data_devolucao;
     boolean emprestado;
 
     //Contrutor da classe
