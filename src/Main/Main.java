@@ -1,6 +1,6 @@
 package Main;
-import item.Livro;
-import livro.Emprestimo;
+import emprestimo.Emprestimo;
+import item.Livro_fisico;
 import pessoas.Funcionario;
 import pessoas.Usuario;
 
@@ -9,7 +9,7 @@ public class Main {
     	
     //Instanciação de objetos
     	
-    Livro livro = new Livro ("Machado de Assis","Dom Casmurro",1,1899,new Emprestimo("12/10/2022","19/10/2022",true),"Romance");
+    Livro_fisico livro = new Livro_fisico ("Machado de Assis","Dom Casmurro",1,1899,new Emprestimo("12/10/2022","19/10/2022",true),"Romance");
     Funcionario funcionario = new Funcionario("João Da Silva","Bibliotecário");
     Usuario usuario = new Usuario ("Pedro Barbosa",58267,"253.567.452-0");
     

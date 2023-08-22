@@ -1,10 +1,11 @@
-package livro;
+package emprestimo;
 
     //Atributos da classe
 public class Emprestimo {
     private String data_emprestimo;
     private String data_devolucao;
-    boolean emprestado;
+    private boolean emprestado;
+    private int limite_de_livros;
 
     //Contrutor da classe
     public Emprestimo (String data_emprestimo,String data_devolucao,boolean emprestado) {
@@ -26,6 +27,10 @@ public class Emprestimo {
 		return emprestado;
 	}
 	
+	public int getLimite_de_livros () {
+		return limite_de_livros;
+	}
+	
 	//Setters da classe
 	
 	public void setData_devolucao(String data_devolucao) {
@@ -40,5 +45,8 @@ public class Emprestimo {
 		this.emprestado = emprestado;
 	}
 	
+	public void setLimite_de_livros (int limite_de_livros) {
+		this.limite_de_livros = limite_de_livros;
+	}
 	
 }

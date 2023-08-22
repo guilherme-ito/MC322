@@ -1,5 +1,5 @@
 package pessoas;
-import item.Livro;
+import item.Livro_fisico;
 
 public class Usuario {
 
@@ -7,7 +7,7 @@ public class Usuario {
     private String nome;
     private int registro;
     private String CPF;
-    private Livro livro;
+    private Livro_fisico livro;
 
     //Construtor da classe
     public Usuario (String nome,int registro, String CPF) {
@@ -36,7 +36,7 @@ public class Usuario {
     	return CPF;
     }
     
-    public Livro getLivro() {
+    public Livro_fisico getLivro() {
     	return livro;
     }	
     //Setters da classe
@@ -53,7 +53,7 @@ public class Usuario {
     	this.CPF = CPF;
     }
     
-    public void setLivro (Livro livro) {
+    public void setLivro (Livro_fisico livro) {
     	this.livro = livro;
     }
 }

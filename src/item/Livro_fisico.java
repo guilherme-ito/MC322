@@ -1,8 +1,8 @@
 package item;
 
-import livro.Emprestimo;
+import emprestimo.Emprestimo;
 
-public class Livro {
+public class Livro_fisico {
 
     //Atributos da classe 
     private String autor;
@@ -13,7 +13,7 @@ public class Livro {
     private String genero;
 
     //Construtor da classe
-    public Livro (String autor, String titulo, int edicao, int ano,Emprestimo emprestimo,String genero) {
+    public Livro_fisico (String autor, String titulo, int edicao, int ano,Emprestimo emprestimo,String genero) {
         this.autor = autor;
         this.titulo = titulo;
         this.edicao = edicao;
