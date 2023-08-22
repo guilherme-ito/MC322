@@ -1,4 +1,5 @@
-package livro;
+package item;
+
 import livro.Emprestimo;
 
 public class Livro {

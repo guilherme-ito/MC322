@@ -1,5 +1,5 @@
 package pessoas;
-import livro.Livro;
+import item.Livro;
 
 public class Usuario {
 
