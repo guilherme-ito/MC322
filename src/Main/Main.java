@@ -10,7 +10,7 @@ public class Main {
     	
 //  object instantiation    	
     	
-    LivroFisico livro = new LivroFisico ("Machado de Assis","Dom Casmurro",1,1899,new Emprestimo("12/10/2022","19/10/2022",true),"Romance");
+    LivroFisico livro = new LivroFisico ("Machado de Assis","Dom Casmurro","Pt-br","Romance",1899,true,"+18",5,1233,5);
     Funcionario funcionario = new Funcionario("João Da Silva","12345","Bibliotecário");
     Graduacao g1 = new Graduacao ("Thiago Nadim","239426","Ciência da computação");
     
