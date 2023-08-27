@@ -1,4 +1,4 @@
-package pessoas;
+package membros;
 import item.Livro_fisico;
 
 public class Usuario {

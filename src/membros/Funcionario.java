@@ -1,4 +1,4 @@
-package pessoas;
+package membros;
 
 public class Funcionario {
 

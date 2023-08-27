@@ -1,8 +1,8 @@
 package Main;
 import emprestimo.Emprestimo;
 import item.Livro_fisico;
-import pessoas.Funcionario;
-import pessoas.Usuario;
+import membros.Funcionario;
+import membros.Usuario;
 
 public class Main {
     public static void main(String[] args) {

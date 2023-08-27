@@ -1,20 +1,21 @@
 package emprestimo;
+//import java.time.LocalDate;
 
-    //Atributos da classe
+    //Class fields
 public class Emprestimo {
     private String data_emprestimo;
     private String data_devolucao;
     private boolean emprestado;
     private int limite_de_livros;
 
-    //Contrutor da classe
+    //Class constructor
     public Emprestimo (String data_emprestimo,String data_devolucao,boolean emprestado) {
         this.data_devolucao = data_devolucao;
         this.data_emprestimo = data_emprestimo;
         this.emprestado = false;
     }
     
-    //Getters da classe
+    // Class Getters 
 	public String getData_devolucao() {
 		return data_devolucao;
 	}
@@ -31,7 +32,7 @@ public class Emprestimo {
 		return limite_de_livros;
 	}
 	
-	//Setters da classe
+	//Class Setters 
 	
 	public void setData_devolucao(String data_devolucao) {
 		this.data_devolucao = data_devolucao;

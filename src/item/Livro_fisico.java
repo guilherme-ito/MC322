@@ -4,7 +4,7 @@ import emprestimo.Emprestimo;
 
 public class Livro_fisico {
 
-    //Atributos da classe 
+    //Class fields
     private String autor;
     private String titulo;
     private int edicao;
@@ -12,7 +12,7 @@ public class Livro_fisico {
     private Emprestimo emprestimo;
     private String genero;
 
-    //Construtor da classe
+    //Class Constructor
     public Livro_fisico (String autor, String titulo, int edicao, int ano,Emprestimo emprestimo,String genero) {
         this.autor = autor;
         this.titulo = titulo;
@@ -20,7 +20,7 @@ public class Livro_fisico {
         this.ano = ano;
         this.genero = genero;
     }
-    //Getters da classe
+    //Class Getters
     public String getAutor () {
     	return autor;
     }
@@ -45,7 +45,7 @@ public class Livro_fisico {
     	return genero;
     }
     
-    //Setters da classe
+    //Class Setters
     public void setAutor(String autor) {
     	this.autor = autor;
     }
