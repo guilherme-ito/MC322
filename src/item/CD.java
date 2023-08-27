@@ -1,11 +1,29 @@
 package item;
 
-public class CD {
+public class CD extends Item {
 	
-	//Class fields
-	private String nome_CD;
-	private int ano_CD;
-	private String gênero;
-	private int ID;
+//	fields
+	int faixas;
+	
+	
+//	constructor
+	public CD(String titulo,String idioma,String genero,int lancamento,boolean disponivel,int faixas) {
+		super(titulo,idioma,genero,lancamento,disponivel);
+		this.faixas=faixas;
+	}
+	
+//	methods
+	
+	
 
+//  getters
+  public int getFaixas() {
+      return faixas;
+  }
+
+//setters
+  public void setFaixas(int faixas) {
+      this.faixas = faixas;
+  }
+  
 }

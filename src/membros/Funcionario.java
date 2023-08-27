@@ -1,37 +1,27 @@
 package membros;
 
-public class Funcionario {
+public class Funcionario extends Membro {
 
-    // Atributos da classe
-    private String nome;
+//  fields
     private String cargo;
 
-    //Construtor da classe
-    public Funcionario(String nome, String cargo) {
-        this.nome = nome;
-        this.cargo = cargo;
+//  Class constructor
+    public Funcionario(String nome,String registro, String cargo) {
+        super(nome, registro);
+        this.cargo = cargo;// Administradores, Atendentes e Gerentes.
+        setPrazo(5);//  certo?
+        setLimiteItens(3);
     }
-    //Métodos
-    public void identificaçãoFuncionario() {
-    	System.out.println("Funcionário:"+ this.getNome()+" Cargo:"+ this.getCargo());
-    }
+//  Methods
     
-    //Getters da classe
     
-    public String getNome () {
-    	return nome;
-    }
     
+//  Getters 
     public String getCargo () {
     	return cargo;
     }
     
-    //Setters da classe
-    
-    public void setNome (String nome) {
-    	this.nome = nome;
-    }
-    
+//  Setters 
     public void setCargo (String cargo) {
     	this.cargo = cargo;
     }

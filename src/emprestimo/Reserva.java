@@ -1,9 +1,7 @@
 package emprestimo;
 
-import item.Livro_fisico;
+import item.Item;
 
 public class Reserva {
-	private Livro_fisico [] livros_reservados;
-	private String data_reserva;
 	
 }
