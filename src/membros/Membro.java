@@ -11,6 +11,7 @@ public abstract class Membro {
     private int prazo;// colocar nos constructors específicos
     private int limiteItens;
     private Item[] emprestados;//lista de itens emprestado do membro
+    
 //  private int multa? em dias
     
     

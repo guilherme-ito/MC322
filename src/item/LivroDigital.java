@@ -9,8 +9,8 @@ public class LivroDigital extends Item {//talvez seja bom criar um pai dos dois 
     int tamanhoArquivo;
     
   //constructor
-    public LivroDigital(String autor,String titulo,String idioma,String genero,int lancamento,boolean disponivel, String classificacao,int edicao,int paginas,int tamanhoArquivo) {
-		super(titulo,idioma,genero,lancamento,disponivel);
+    public LivroDigital(String autor,String titulo,String idioma,String genero,int lancamento,boolean disponivel, String sinopse,String capa, String classificacao,int edicao,int paginas,int tamanhoArquivo) {
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao);
 		this.autor=autor;
 		this.edicao=edicao;
 		this.paginas=paginas;

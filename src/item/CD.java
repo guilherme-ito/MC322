@@ -7,8 +7,8 @@ public class CD extends Item {
 	
 	
 //	constructor
-	public CD(String titulo,String idioma,String genero,int lancamento,boolean disponivel,int faixas) {
-		super(titulo,idioma,genero,lancamento,disponivel);
+	public CD(String titulo,String idioma,String genero,int lancamento,boolean disponivel,String sinopse,String capa,String classificacao,int faixas) {
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao);
 		this.faixas=faixas;
 	}
 	
