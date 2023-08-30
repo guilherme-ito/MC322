@@ -1,7 +1,5 @@
 package item;
 
-
-
 public class LivroFisico extends Item {
 
     //fields
