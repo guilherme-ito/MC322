@@ -1,4 +1,6 @@
-package membros;
+package funcionario;
+
+import membros.Membro;
 
 public class Funcionario extends Membro {
 
