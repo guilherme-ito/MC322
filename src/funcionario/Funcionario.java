@@ -1,16 +1,17 @@
-package membros;
+package funcionario;
 
-public class Funcionario extends Membro {
+public abstract class Funcionario {
 
 //  fields
     private String cargo;
+    private String nome;
+    private String registro;
 
 //  Class constructor
     public Funcionario(String nome,String registro, String cargo) {
-        super(nome, registro);
-        this.cargo = cargo;// Administradores, Atendentes e Gerentes.
-        setPrazo(5);//  certo?
-        setLimiteItens(3);
+    	this.nome = nome;
+    	this.registro = registro;
+    	this.cargo = cargo;
     }
 //  Methods
     

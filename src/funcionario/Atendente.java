@@ -1,4 +1,4 @@
-package membros;
+package funcionario;
 
 public class Atendente extends Funcionario {
 	
