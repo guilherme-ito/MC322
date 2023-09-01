@@ -1,7 +1,7 @@
 package Main;
 import emprestimo.Emprestimo;
+import funcionario.Funcionario;
 import item.LivroFisico;
-import membros.Funcionario;
 import membros.Graduacao;
 
 
