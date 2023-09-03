@@ -1,7 +1,7 @@
 package item;
 
 public class CD extends Item {
-	
+
 //	fields
 	int faixas;
 	
