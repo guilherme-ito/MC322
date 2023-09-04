@@ -6,11 +6,14 @@ public abstract class Membro {
 
 	
 //  fields
+	
 	private String nome;
     private String registro;
     private String endereco;
     private String contato;
     private String dataRegistro;
+    
+    protected TipoMembro tipo;
     
    
     
@@ -21,6 +24,10 @@ public abstract class Membro {
         this.endereco=endereco;
         this.contato=contato;
         this.dataRegistro=dataRegistro;
+        
+        
+        
+        
         
     }
     
@@ -45,7 +52,9 @@ public abstract class Membro {
     public String getDataRegistro() {
         return dataRegistro;
     }
-    
+    public TipoMembro getTipo() {
+        return tipo;
+    }//n tem setters pq é imutavel??sla
 
 
    
@@ -66,6 +75,9 @@ public abstract class Membro {
 
     public void setDataRegistro(String dataRegistro) {
         this.dataRegistro = dataRegistro;
+    }
+    public void setTipo(TipoMembro novoTipo) {
+        this.tipo = novoTipo;
     }
    
     

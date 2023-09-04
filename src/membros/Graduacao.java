@@ -6,16 +6,17 @@ public class Graduacao extends Membro {
 	 private String curso;
 	 
 //	  constructor
-	  public Graduacao(String nome, String registro, String endereco,String contato,String dataRegistro,
+	  public Graduacao(String nome, String registro, String endereco,String contato,String dataRegistro,TipoMembro tipo,
 			  String curso) {
 
 		    super(nome, registro,endereco,contato,dataRegistro);
-		  	
+		  	this.tipo=TipoMembro.GRAD;
 	  		this.curso = curso;
 	  		
 	    	}
 	  
 //	  methods
+	  
 	  
 //	  getters
 	  public String getCurso() {
