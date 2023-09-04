@@ -4,13 +4,10 @@ public abstract class Funcionario {
 
 //  fields
     private String cargo;
-    private String nome;
-    private String registro;
-
+    
 //  Class constructor
-    public Funcionario(String nome,String registro, String cargo) {
-    	this.nome = nome;
-    	this.registro = registro;
+    public Funcionario( String cargo) {
+    	
     	this.cargo = cargo;
     }
 //  Methods

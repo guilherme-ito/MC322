@@ -1,6 +1,7 @@
 package membros;
 
 public class Graduacao extends Membro {
+	
 //	fields
 	 private String curso;
 	 
@@ -30,5 +31,3 @@ public class Graduacao extends Membro {
 
 
 
-
-//	dúvida, como vamo fazer isso da lista de emprestados?

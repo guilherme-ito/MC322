@@ -8,7 +8,7 @@ public class Atendente extends Funcionario {
 	
 //	constructor
 	public Atendente(String nome,String registro, String cargo) {
-		super(nome,registro, cargo);
+		super(cargo);
 	}
 //	methods
 	

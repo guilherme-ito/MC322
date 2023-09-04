@@ -6,7 +6,7 @@ public class Administrador extends Funcionario {
 	
 //	constructor
 	public Administrador(String nome,String registro, String cargo) {
-		super(nome,registro, cargo);
+		super(cargo);
 	}
 	
 	
