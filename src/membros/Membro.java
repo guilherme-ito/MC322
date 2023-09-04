@@ -8,19 +8,19 @@ public abstract class Membro {
 //  fields
 	private String nome;
     private String registro;
-    private int prazo;// colocar nos constructors específicos
-    private int limiteItens;
-    private Item[] emprestados;//lista de itens emprestado do membro
+    private String endereco;
+    private String contato;
+    private String dataRegistro;
     
-//  private int multa? em dias
-    
-    
-//  private List<Emprestimo> historicoEmprestimos = new ArrayList<>();
+   
     
 //  constructor
-    public Membro(String nome, String registro) {
+    public Membro(String nome, String registro,String endereco,String contato,String dataRegistro) {
         this.nome = nome;
         this.registro = registro;
+        this.endereco=endereco;
+        this.contato=contato;
+        this.dataRegistro=dataRegistro;
         
     }
     
@@ -34,15 +34,18 @@ public abstract class Membro {
     public String getRegistro() {
         return registro;
     }
-    public int getPrazo() {
-        return prazo;
+    public String getEndereco() {
+        return endereco;
     }
-    public Item[] getEmprestados() {
-        return emprestados;
+
+    public String getContato() {
+        return contato;
     }
-    public int getLimiteItens() {
-        return limiteItens;
+
+    public String getDataRegistro() {
+        return dataRegistro;
     }
+    
 
 
    
@@ -53,16 +56,17 @@ public abstract class Membro {
     public void setRegistro(String registro) {
         this.registro = registro;
     }
-    public void setPrazo(int prazo) {
-        this.prazo = prazo;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
-  
-    public void setEmprestados(Item[] emprestados) {
-        this.emprestados = emprestados;
+
+    public void setContato(String contato) {
+        this.contato = contato;
     }
-    public void setLimiteItens(int limiteItens) {
-        this.limiteItens = limiteItens;
+
+    public void setDataRegistro(String dataRegistro) {
+        this.dataRegistro = dataRegistro;
     }
-    
+   
     
 }

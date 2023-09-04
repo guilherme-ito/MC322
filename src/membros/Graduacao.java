@@ -3,13 +3,15 @@ package membros;
 public class Graduacao extends Membro {
 //	fields
 	 private String curso;
+	 
 //	  constructor
-	  public Graduacao(String nome, String registro, String curso) {
-		  	super(nome, registro);
-		  	setPrazo(5);
+	  public Graduacao(String nome, String registro, String endereco,String contato,String dataRegistro,
+			  String curso) {
+
+		    super(nome, registro,endereco,contato,dataRegistro);
+		  	
 	  		this.curso = curso;
-	  		setLimiteItens(3);
-//	  		this.emprestados=new Item[5];
+	  		
 	    	}
 	  
 //	  methods
