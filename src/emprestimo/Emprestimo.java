@@ -1,40 +1,45 @@
 package emprestimo;
 import item.Item;
-//testando a branch 123456
-    //Class fields
+
+    
 public class Emprestimo {
-    private String data_emprestimo;
-    private String data_devolucao;
+	
+	//Class fields
+    private String dataEmprestimo;
+    private String dataDevolucao;
+   
+    private int limite;
+    private int prazo;
+    private int multa;//falta completar aqui
+    
     //total de livros emprestados
 
     //Class constructor
-    public Emprestimo (String data_emprestimo,String data_devolucao) {
-        this.data_devolucao = data_devolucao;
-        this.data_emprestimo = data_emprestimo;
-//        private static Item[] totalEmprestimo;lista de total de itens que estão emprestados pq n pode? array para toda classe global""
+    public Emprestimo (String dataEmprestimo,String dataDevolucao,int limite,int prazo,int multa) {
+    	
+    	this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = dataDevolucao;
+//        
     }
     
     // Class Getters 
-	public String getData_devolucao() {
-		return data_devolucao;
+	public String getDataDevolucao() {
+		return dataDevolucao;
 	}
 	
-	public String getData_emprestimo () {
-		return data_emprestimo;
-	}
-	
-	
+	public String getDataEmprestimo () {
+		return dataEmprestimo;
+	}
 	
 	
 	//lass Setters 
 	
 	public void setData_devolucao(String data_devolucao) {
-		this.data_devolucao = data_devolucao;
+		this.dataDevolucao = dataDevolucao;
 	}
 	
 	public void setData_emprestimo(String data_emprestimo) {
-		this.data_emprestimo = data_emprestimo;
-	}
+		this.dataEmprestimo = dataEmprestimo;}
 	
 	
 

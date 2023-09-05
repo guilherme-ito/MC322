@@ -7,18 +7,26 @@ public class LivroFisico extends Item {
 	private String editora;
     private int edicao;
     private int paginas;
-    private int exemplares;
-    
+    private int exemplares;// tem que ser exemplares da edição
+    // tem que ter os exemplares disponíveis tmb
+    private String isbn;
+    private String conservacao;
+    private String localizacao;
     
 
     //constructor
-    public LivroFisico(String autor,String titulo,String idioma,String genero,int lancamento,boolean disponivel,String sinopse,String capa, String classificacao,String editora,int edicao,int paginas,int exemplares,int exemplaresDisp) {
+    public LivroFisico(String titulo,String idioma,String genero,int lancamento,boolean disponivel,String sinopse,String capa,String classificacao,
+    		String autor,String editora,int edicao,int paginas,int exemplares, String isbn, String conservacao, String localizacao) {
+    	
 		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao);
 		this.autor=autor;
 		this.edicao=edicao;
 		this.editora=editora;
 		this.paginas=paginas;
 		this.exemplares=exemplares;
+		this.isbn=isbn;
+		this.conservacao=conservacao;
+		this.localizacao=localizacao;
 		
 	}
 
@@ -35,17 +43,27 @@ public class LivroFisico extends Item {
         return edicao;
     }
 
+    public String getEditora() {
+    	return editora;
+    }
     public int getPaginas() {
         return paginas;
     }
     public int getExemplares() {
-        return exemplares;
-    }
-    public String getEditora() {
-        return editora;
+    	return exemplares;
     }
 
-    
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getConservacao() {
+        return conservacao;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
     
     
 
@@ -69,7 +87,18 @@ public class LivroFisico extends Item {
     public void setEditora(String editora) {
         this.editora = editora;
     }
+    
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
+    public void setConservacao(String conservacao) {
+        this.conservacao = conservacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
     
 
 } 

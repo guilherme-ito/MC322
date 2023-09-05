@@ -12,6 +12,7 @@ out/
 .settings
 .springBeans
 .sts4-cache
+.cdproject
 
 
 
@@ -27,3 +28,4 @@ out/
 
 ### Mac OS ###
 .DS_Store
+/bin/

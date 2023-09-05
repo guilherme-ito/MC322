@@ -6,10 +6,11 @@ public class Professor extends Membro {
 	private String departamento;
 	
 //  constructor
-    public Professor(String nome, String registro, String departamento) {
-        super(nome, registro);
-        setPrazo(10);
-        setLimiteItens(3);
+    public Professor(String nome, String registro,String endereco,String contato,String dataRegistro,TipoMembro tipo,
+    		String departamento) {
+    	
+    	super(nome, registro,endereco,contato,dataRegistro);
+        this.tipo=TipoMembro.PROF;
         this.departamento = departamento;
     }
 //    methods
