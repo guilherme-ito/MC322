@@ -6,15 +6,15 @@ import java.util.Map ;
 public class ReservaSala {
 //	fields
 	
+	private String dataReserva;
 	private String horaInicio;
 	private String horaFim;         //getters e setters?
-	private String dataReserva;
 	
 //	inner classes
 	
 	public class SalaIndividual{
 		//fields
-		private boolean dispComp;
+		private boolean compDisp;
 		private int salaNum;
 	}
 	public class SalaGrupo{
@@ -24,7 +24,7 @@ public class ReservaSala {
 	}
 	public class SalaSilenciosa{
 		//fields
-		private int assentosNum;
+		private int numAssentos;
 		private boolean cabineIndiv;
 	}
 	public class SalaMultimidia{
