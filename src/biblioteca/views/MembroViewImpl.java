@@ -14,12 +14,12 @@ public class MembroViewImpl implements MembroView {
     }
 
     @Override
-    public void mostrarListaMembros(List<Membro> membros) {
+    public void mostrarListaMembros(List<Membro> membrosList) {
         // Implementação da exibição da lista de membros
     }
 
     @Override
-    public void mostrarDetalhesMembro(Membro membro) {
+    public void mostrarDetalhesMembro(Membro membroDet) {
         // Implementação da exibição dos detalhes de um membro
     }
 }

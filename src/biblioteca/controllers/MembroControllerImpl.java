@@ -1,5 +1,25 @@
 package biblioteca.controllers;
 
-public class MembroControllerImpl {
+import java.util.ArrayList;
+import java.util.List;
 
+import biblioteca.models.membros .*;
+
+public class MembroControllerImpl implements MembroController {
+    private List<Membro> membros;
+
+    public MembroControllerImpl() {
+        membros = new ArrayList<>();
+    }
+
+    @Override
+    public List<Membro> listarMembros() {
+        return membros;
+    }
+
+    @Override
+    public Membro buscarMembroPorIdentificacao(String identificacao) {
+        // Lógica de busca
+        return null;
+    }
 }

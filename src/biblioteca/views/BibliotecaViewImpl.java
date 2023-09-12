@@ -14,7 +14,7 @@ public class BibliotecaViewImpl implements BibliotecaView {
     }
 
     @Override
-    public void mostrarItensDisponiveis(List<ItemMultimidia> itens) {
+    public void mostrarItensDisponiveis(List<Item> itens) {//checar
         // Implementação da exibição de itens disponíveis
     }
 
