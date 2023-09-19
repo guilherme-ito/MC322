@@ -8,5 +8,5 @@ public interface BibliotecaView {
     void mostrarItensDisponiveis(List<Item> itens);//checar
     void mostrarEmprestimoStatus(boolean sucesso);
     void mostrarDevolucaoStatus(boolean sucesso);
-    asdiopasjdiasjdo
+    
 }

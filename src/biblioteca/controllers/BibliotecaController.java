@@ -2,8 +2,8 @@ package biblioteca.controllers;
 
 import java.util.List;
 
+import biblioteca.models.allMembros.*;
 import biblioteca.models.item .*;
-import biblioteca.models.membros.*;
 import biblioteca.views.BibliotecaView;
 
 public interface BibliotecaController {

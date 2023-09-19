@@ -1,4 +1,4 @@
-package biblioteca.models.membros;
+package biblioteca.models.allMembros;
 
 import biblioteca.models.item.Item;
 

@@ -3,8 +3,8 @@ package biblioteca.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import biblioteca.models.allMembros.*;
 import biblioteca.models.item .*;
-import biblioteca.models.membros .*;
 
 public class BibliotecaControllerImpl implements BibliotecaController {
     private List<Item> itens;

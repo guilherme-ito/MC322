@@ -1,7 +1,7 @@
-package biblioteca.models.membros.funcionarios;
+package biblioteca.models.allMembros.funcionarios;
 
-import biblioteca.models.membros.Membro;
-import biblioteca.models.membros.TipoMembro;
+import biblioteca.models.allMembros.Membro;
+import biblioteca.models.allMembros.TipoMembro;
 
 public class Funcionario extends Membro {
 	
@@ -9,7 +9,7 @@ public class Funcionario extends Membro {
 	    private String cargo;
 	    
 	//  Class constructor
-	    public Funcionario(String nome, String registro,String endereco,String contato,String dataRegistro,TipoMembro tipo,
+	    public Funcionario(String nome, String registro,String endereco,String contato,String dataRegistro,
 	    		String cargo) {
 	    	
 	        super(nome, registro,endereco,contato,dataRegistro);
