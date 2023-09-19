@@ -18,6 +18,8 @@ public abstract class Membro {
     
     protected TipoMembro tipo;
     
+    
+    
    
     
 //  constructor
@@ -32,6 +34,7 @@ public abstract class Membro {
     }
     
 //  methods
+    
     
     
     
