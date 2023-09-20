@@ -13,10 +13,11 @@ public class DVD extends Item{
 	//exemplares disponiveis
 	
 //	constructor
-	public DVD(String titulo,String idioma,String genero,int lancamento,boolean disponivel,String sinopse,String capa, String classificacao,
+	public DVD(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
+			String sinopse,String capa, String classificacao,int id,
 			String elenco,String duracao,int exemplares,String conservacao, String legendaAudio) {
 		
-		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao);
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id);
 		
 		this.elenco=elenco;
 		this.duracao=duracao;

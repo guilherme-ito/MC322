@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import biblioteca.models.allMembros .*;
 import biblioteca.models.allMembros.funcionarios.Administrador;//pq eu tenho que importar duas vzs?
+import biblioteca.models.allMembros.Membro;
 
 
 
@@ -22,10 +23,42 @@ public class MembroControllerImpl implements MembroController {
     
 //    methods
     
-    @Override
-    public String toString() {
-        return "oi";
-    }
+//    @Override
+//    public String toString() {
+//    	switch (this.getTipo()) {
+//    	case "GRAD":
+//   	     System.out.println("membro do tipo GRAD");
+//   	     return (this.);
+//   	     break;
+//   	 case "POSGRAD":
+//   	     System.out.println("membro do tipo POSGRAD");
+//   	     
+//   	     break;
+//   	 case "PROF":
+//   	      System.out.println("membro do tipo PROF");
+//   	      break;
+//   	 case "FUNC":
+//   	     System.out.println("membro do tipo FUNC");
+//   	     String cargo=scanner.nextLine();
+//   	     switch (cargo) {
+//   	     case "Admin":
+//   	         System.out.println("Func do tipo Admin");
+//   	     case "Atendente":
+//   	     System.out.println("Func do tipo Atendente");
+//   	         break;
+//   	     case "Gerente":
+//   	     System.out.println("Func do tipo Gerente");
+//   	         break;
+//   	     default:
+//   	         System.out.println("Opção inválida.");
+//   	 }
+//   	     break;
+//   	 default:
+//   	     System.out.println("Opção inválida.");
+//   	}
+//    	return "oi";
+//    }
+//     tenho que fazer em cada classse o toString na classe membros na real
     
     @Override
     public List<Membro> listarMembros() {

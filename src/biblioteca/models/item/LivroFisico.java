@@ -15,10 +15,11 @@ public class LivroFisico extends Item {
     
 
     //constructor
-    public LivroFisico(String titulo,String idioma,String genero,int lancamento,boolean disponivel,String sinopse,String capa,String classificacao,
+    public LivroFisico(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
+    		String sinopse,String capa,String classificacao,int id,
     		String autor,String editora,int edicao,int paginas,int exemplares, String isbn, String conservacao, String localizacao) {
     	
-		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao);
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id);
 		this.autor=autor;
 		this.edicao=edicao;
 		this.editora=editora;

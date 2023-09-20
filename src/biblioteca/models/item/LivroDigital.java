@@ -15,11 +15,12 @@ public class LivroDigital extends Item {//talvez seja bom criar um pai dos dois 
     
     
   //constructor
-    public LivroDigital(String titulo,String idioma,String genero,int lancamento,boolean disponivel, String sinopse,String capa, String classificacao,
+    public LivroDigital(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
+    		String sinopse,String capa, String classificacao,int id,
     		String autor,int edicao,int paginas,int tamanhoArquivo,String formato,int numLicencas,String urlAcesso,
     		String reqLeitura) {
     	
-		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao);
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao, id);
 		this.autor=autor;
 		this.edicao=edicao;
 		this.paginas=paginas;
@@ -28,6 +29,7 @@ public class LivroDigital extends Item {//talvez seja bom criar um pai dos dois 
 		this.numLicencas=numLicencas;
 		this.urlAcesso=urlAcesso;
 		this.reqLeitura=reqLeitura;
+		
 	}
 
  

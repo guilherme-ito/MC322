@@ -14,10 +14,13 @@ public abstract class Item {
 	private String sinopse;
 	private String capa;
 	private String classificacao;
+	private int id;
+	
 //	lista de espera pro item
 	
 //	constructor
-	public Item(String titulo,String idioma,String genero,int lancamento,boolean disponivel,String sinopse,String capa, String classificacao) {
+	public Item(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
+			String sinopse,String capa, String classificacao, int id) {
 		this.titulo=titulo;
 		this.idioma=idioma;
 		this.genero=genero;
@@ -26,6 +29,7 @@ public abstract class Item {
 		this.sinopse=sinopse;
 		this.capa=capa;
 		this.classificacao=classificacao;
+		this.id=id;
 	}
 	
 //	methods
@@ -63,6 +67,9 @@ public abstract class Item {
 	    public String getClassificacao() {
 	        return classificacao;
 	    }
+	    public int getId() {
+	        return id;
+	    }
 	    
 
 //	setters
@@ -98,6 +105,9 @@ public abstract class Item {
 	    
 	    public void setClassificacao(String classificacao) {
 	        this.classificacao = classificacao;
+	    }
+	    public void setId(int novoId) {
+	        id = novoId;
 	    }
 	
 }
