@@ -1,3 +1,5 @@
+package biblioteca.models.item;
+
 public class ItemBiblioteca<T> {
     
     //Atributos
