@@ -1,10 +1,15 @@
 package biblioteca.models.diversos;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
-import java.util.HashSet;
 
+import biblioteca.models.allMembros.Membro;
 
 public class EventosBiblioteca {
+	
+//	fields
+	private List<Membro> participantes;
 
 	public class Palestra{
 		private String palestrante;

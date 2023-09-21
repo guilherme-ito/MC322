@@ -1,6 +1,9 @@
 package biblioteca.models.allMembros;
 
+import biblioteca.models.emprestimo.Emprestimo;
 import biblioteca.models.item.Item;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public abstract class Membro {
@@ -17,6 +20,7 @@ public abstract class Membro {
     private String dataRegistro;
     
     protected TipoMembro tipo;
+    private List <Emprestimo> historico;
     
     
     
@@ -29,12 +33,15 @@ public abstract class Membro {
         this.endereco=endereco;
         this.contato=contato;
         this.dataRegistro=dataRegistro;
-        
+        historico=new ArrayList<>();
         
     }
     
 //  methods
     
+    public void adcHistorico(Emprestimo emprestimo) {
+    	historico.add(emprestimo);//tem q fazer scanner aqui tmb?
+    }
     
     
     

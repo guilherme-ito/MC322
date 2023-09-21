@@ -2,6 +2,10 @@ package biblioteca.models.item;
 
 import biblioteca.models.emprestimo.Emprestimo;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public abstract class Item {
 	
 //	fields
@@ -15,6 +19,9 @@ public abstract class Item {
 	private String capa;
 	private String classificacao;
 	private int id;
+	private List<Comentario> comentariosItem;
+	
+	Scanner scanner = new Scanner(System.in);
 	
 //	lista de espera pro item
 	
@@ -30,9 +37,18 @@ public abstract class Item {
 		this.capa=capa;
 		this.classificacao=classificacao;
 		this.id=id;
+		comentariosItem= new ArrayList<>();
 	}
 	
 //	methods
+	
+	public void adcComentario(Scanner scanner) {
+		
+		int membroId=scanner.nextInt();
+		int itemId=scanner.nextInt();
+		String texto=scanner.nextLine();
+		comentariosItem.add(new Comentario(membroId,itemId,texto));
+	}
 
 //	getters
 	 public String getTitulo() {
