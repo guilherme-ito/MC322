@@ -2,8 +2,9 @@ package biblioteca.models.item;
 
 public class ItemBiblioteca<T> {
     
-    //Atributos
-
+    
+	
+//	fields
     private T item;
     private String titulo;
     private int id;
