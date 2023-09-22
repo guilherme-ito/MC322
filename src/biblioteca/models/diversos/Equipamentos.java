@@ -1,6 +1,6 @@
 import biblioteca.models.generics.ItemBiblioteca;
 
-public class Equipamentos extends ItemBiblioteca<Equipamento> {
+public class Equipamentos extends ItemBiblioteca<Equipamentos> {
     
 	// Atributos
 	private Tipo tipo;
@@ -15,11 +15,11 @@ public class Equipamentos extends ItemBiblioteca<Equipamento> {
         this.modelo = modelo;
     }
 	
-    public void adicionarReserva  (Equipamento) {
+    public void adicionarReserva  (Equipamentos) {
         ListaReservas<Multimidia> reservado = new ListaReservas<>(dataReserva,horaFim,horaInicio)
         reservado.adicionarReserva;
 	}
-	 public void removerReserva (Equipamento) {
+	 public void removerReserva (Equipamentos) {
         ListaReservas<Multimidia> removido = new ListaReservas<>(dataReserva,horaFim,horaInicio)
         removido.removerReserva;
 	 }
