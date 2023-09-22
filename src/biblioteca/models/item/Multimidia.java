@@ -1,3 +1,5 @@
+package biblioteca.models.item;
+
 import biblioteca.models.generics.ItemBiblioteca;
 
 public class Multimidia extends ItemBiblioteca<Multimidia> {
