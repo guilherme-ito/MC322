@@ -9,7 +9,9 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import biblioteca.models.emprestimo.Emprestimo;
+import biblioteca.models.emprestimo.Reserva;
 import biblioteca.models.allMembros.*;
+import biblioteca.models.allMembros.funcionarios.Funcionario;
 import biblioteca.models.item .*;
 
 public class BibliotecaControllerImpl implements BibliotecaController {
@@ -18,6 +20,7 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     private List<Item> itens;
     private Map<Integer,Item> mapaItens;
     private Set<Emprestimo> emprestimos;
+    private List<Reserva> reservas;
     
     Scanner scanner = new Scanner(System.in);
     
@@ -25,13 +28,51 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     public BibliotecaControllerImpl() {
         itens = new ArrayList<>();
         mapaItens=new HashMap<>();
-        emprestimos=new TreeSet<>();// temo que arrumar a classe emprestimo
+        emprestimos=new TreeSet<>();
+        reservas=new ArrayList<>();
     }
     
     
 //    methods
+    
+    public boolean adcReserva() {
+    	return true;
+    }
+    public boolean removerReserva() {
+    	return true;
+    }
+    
+    
+    
+    
+    public boolean adcEmprestimo(Membro usuario,Item recurso,Funcionario  emprestador,String dataEmprestimo,String dataDevolucao) {
+    	
+    	for(Emprestimo emprestimo:emprestimos) {
+    		if(emprestimo.getRecurso().getId()==recurso.getId()) {
+    			System.out.println("Esse item já está emprestado");
+//    			adc a lista de reservas
+    			return false;
+    		}
+    	}
+    	emprestimos.add(new Emprestimo(usuario,recurso,emprestador,dataEmprestimo,dataDevolucao));
+    	System.out.println("emprestimo realizado com sucesso");
+    	return true;
+    }
+    public boolean retornarEmprestimo(int id) {
+    	for(Emprestimo emprestimo:emprestimos) {
+    		if(emprestimo.getRecurso().getId()==id) {
+    			emprestimos.remove(emprestimo);
+//    			prox da lista de reservas deve receber esse item
+    			return true;
+    		}
+    	}
+    	System.out.println("Esse item não está emprestado");
+    	return false;
+    }
+    
     public void adcItemId(Scanner scanner) {
     	System.out.println("digite os atributos do item");
+    	int id= scanner.nextInt();
     	String titulo =scanner.nextLine();
     	String idioma =scanner.nextLine();
     	String genero =scanner.nextLine();
@@ -40,7 +81,6 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     	String sinopse=scanner.nextLine();
     	String capa =scanner.nextLine();
     	String classificacao =scanner.nextLine();
-    	int id= scanner.nextInt();
     	System.out.println("qual tipo de item voce quer adc?(LivroDigital,LivroFisico,DVD ou CD");
     	String tipo=scanner.nextLine();
     	String autor;

@@ -17,6 +17,10 @@ public class Funcionario extends Membro {
 	        this.cargo = cargo;
 	    }
 	//  Methods
+	    public String toString() {
+			return "nome"+this.getNome()+"registro"+this.getRegistro()+"endereco"+this.getEndereco()+"contato"+this.getContato()+
+					"dataRegistro"+this.getDataRegistro()+"departamento"+this.cargo;
+	    }
 	    
 	    
 	    

@@ -18,7 +18,8 @@ public abstract class Membro {
     private String endereco;
     private String contato;
     private String dataRegistro;
-    
+    private int multaAcumulada;
+    private int multaDiaAtraso;
     protected TipoMembro tipo;
     private List <Emprestimo> historico;
     
@@ -34,6 +35,8 @@ public abstract class Membro {
         this.contato=contato;
         this.dataRegistro=dataRegistro;
         historico=new ArrayList<>();
+        multaDiaAtraso=1;
+        
         
     }
     
@@ -42,6 +45,9 @@ public abstract class Membro {
     public void adcHistorico(Emprestimo emprestimo) {
     	historico.add(emprestimo);//tem q fazer scanner aqui tmb?
     }
+    
+    
+    
     
     
     

@@ -22,62 +22,47 @@ public class MembroControllerImpl implements MembroController {
     Scanner scanner = new Scanner(System.in);
     
 //    methods
-    
-//    @Override
-//    public String toString() {
-//    	switch (this.getTipo()) {
-//    	case "GRAD":
-//   	     System.out.println("membro do tipo GRAD");
-//   	     return (this.);
-//   	     break;
-//   	 case "POSGRAD":
-//   	     System.out.println("membro do tipo POSGRAD");
-//   	     
-//   	     break;
-//   	 case "PROF":
-//   	      System.out.println("membro do tipo PROF");
-//   	      break;
-//   	 case "FUNC":
-//   	     System.out.println("membro do tipo FUNC");
-//   	     String cargo=scanner.nextLine();
-//   	     switch (cargo) {
-//   	     case "Admin":
-//   	         System.out.println("Func do tipo Admin");
-//   	     case "Atendente":
-//   	     System.out.println("Func do tipo Atendente");
-//   	         break;
-//   	     case "Gerente":
-//   	     System.out.println("Func do tipo Gerente");
-//   	         break;
-//   	     default:
-//   	         System.out.println("Opção inválida.");
-//   	 }
-//   	     break;
-//   	 default:
-//   	     System.out.println("Opção inválida.");
-//   	}
-//    	return "oi";
-//    }
-//     tenho que fazer em cada classse o toString na classe membros na real
-    
     @Override
     public List<Membro> listarMembros() {
     	for(Membro x:membros) {
-    		System.out.println(x);//sobrescrever tostring
+    		System.out.println(x.toString());
     	}
         return membros;
     }
 
     @Override
-    public Membro buscarMembroPorIdentificacao(String identificacao) {//fazer
-        // Lógica de busca
-        return null;
+    public Membro buscarMembroPorIdentificacao(String identificacao) {
+    	for(Membro x:membros) {
+    		if(x.getRegistro()==identificacao) {
+    			System.out.println(x.toString());
+    			return x;
+    		}
+    	}
+    		System.out.println("Esse membro não pertence a biblioteca");
+    		
+    		return null;
     }
     
+    
+   public boolean checaMembroLista(String identificacao) {
+	   for(Membro x:membros) {
+   		if(x.getRegistro()==identificacao) {
+   			
+   			return true;
+   		}
+   		}
+   	   return false;
+   }
+    
     public void adicMembro(Scanner scanner) {
-    	System.out.println("digite o nome , registro, endereço,contato, data de registro e tipo do membro");
-    	String nome=scanner.nextLine();
+    	System.out.println("digite o registro,nome, endereço,contato, data de registro e tipo do membro");
     	String registro=scanner.nextLine();
+    	if(this.checaMembroLista(registro)) {
+    		System.out.println("Esse registro já existe");
+    	}
+    	else {
+    	
+    	String nome=scanner.nextLine();
     	String endereco=scanner.nextLine();
     	String contato=scanner.nextLine();
     	String dataRegistro=scanner.nextLine();
@@ -86,8 +71,7 @@ public class MembroControllerImpl implements MembroController {
     	 case "GRAD":
     	     System.out.println("membro do tipo GRAD");
     	     String curso=scanner.nextLine();
-    	     membros.add(new Graduacao(nome, registro, endereco,contato,dataRegistro,
-    	                curso));
+    	     membros.add(new Graduacao(nome, registro, endereco,contato,dataRegistro,curso));
     	     break;
     	 case "POSGRAD":
     	     System.out.println("membro do tipo POSGRAD");
@@ -121,6 +105,7 @@ public class MembroControllerImpl implements MembroController {
     	     break;
     	 default:
     	     System.out.println("Opção inválida.");
+    	}
     	}
     	
     }

@@ -1,68 +1,84 @@
 package biblioteca.models.emprestimo;
+import biblioteca.models.allMembros.Membro;
+import biblioteca.models.allMembros.funcionarios.Funcionario;
 import biblioteca.models.item.Item;
 
     
 public class Emprestimo {
 	
 	//Class fields
+	private Membro usuario;
+	private Item recurso;
+	private Funcionario emprestador;
     private String dataEmprestimo;
     private String dataDevolucao;
    
-    private int limite;//q isso qr dizeer?
-    private int prazo;//acho q isso é melhor colocar em membros
-    private int multa;//acho q isso é melhor colocar em membros
+   
+    
     
   
 
     //Class constructor
-    public Emprestimo (String dataEmprestimo,String dataDevolucao,int limite,int prazo,int multa) {
-    	
+    public Emprestimo (Membro usuario,Item recurso,Funcionario  emprestador,String dataEmprestimo,String dataDevolucao) {
+    	this.usuario=usuario;
+    	this.recurso=recurso;
+    	this.emprestador=emprestador;
     	this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
 //        
     }
     
     // Class Getters .
-	public String getDataDevolucao() {
-		return dataDevolucao;
-	}
-	
-	public String getDataEmprestimo () {
-		return dataEmprestimo;
-	}	public int getLimite() {
-        return limite;
+    public Membro getUsuario() {
+        return usuario;
     }
 
-    public int getPrazo() {
-        return prazo;
+    public Item getRecurso() {
+        return recurso;
     }
 
-    public int getMulta() {
-        return multa;
+    public Funcionario getEmprestador() {
+        return emprestador;
     }
+
+    public String getDataEmprestimo() {
+        return dataEmprestimo;
+    }
+
+    public String getDataDevolucao() {
+        return dataDevolucao;
+    }
+
+    
+
+
+
 	
 	
 	//lass Setters 
 	
-	public void setData_devolucao(String data_devolucao) {
-		this.dataDevolucao = dataDevolucao;
-	}
-	
-	public void setData_emprestimo(String data_emprestimo) {
-		this.dataEmprestimo = dataEmprestimo;
-		}
-	public void setLimite(int limite) {
-        this.limite = limite;
+    public void setUsuario(Membro usuario) {
+        this.usuario = usuario;
     }
 
-    public void setPrazo(int prazo) {
-        this.prazo = prazo;
+    public void setRecurso(Item recurso) {
+        this.recurso = recurso;
     }
 
-    public void setMulta(int multa) {
-        this.multa = multa;
+    public void setEmprestador(Funcionario emprestador) {
+        this.emprestador = emprestador;
     }
-	
+
+    public void setDataEmprestimo(String dataEmprestimo) {
+        this.dataEmprestimo = dataEmprestimo;
+    }
+
+    public void setDataDevolucao(String dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
+    }
+
+    
+
 	
 
 }
