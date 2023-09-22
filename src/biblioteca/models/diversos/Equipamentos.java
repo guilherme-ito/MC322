@@ -1,22 +1,24 @@
-package biblioteca.models.diversos;
+public class Equipamento extends ItemBiblioteca<Equipamento> {
+    
+	// Atributos
+	private Tipo tipo;
+    private String marca;
+    private String modelo;
 
-
-import java.util.HashMap;
-import java.util.Map ;
-
-public class Equipamentos {
-
-	public class Informatica{
-		Map<String,String> informatica;
+	// Construtores
+    public Equipamento(String titulo, int id, Status status, Tipo tipo, String marca, String modelo) {
+        super(titulo, id, status);
+        this.tipo = tipo;
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+	
+    public void adicionarReserva  (Equipamento) {
+        ListaReservas<Multimidia> reservado = new ListaReservas<>(dataReserva,horaFim,horaInicio)
+        reservado.adicionarReserva;
 	}
-	public class AudioVisual{
-		Map<String,String> audioVisual;
-	}
-	public class Impressão{
-		Map<String,String> impressao;
-		
-	}
-	enum CategoriaEquipamento{
-		INFORMATICA,AUDIOVISUAL,IMPRESSAO
-	}
+	 public void removerReserva (Equipamento) {
+        ListaReservas<Multimidia> removido = new ListaReservas<>(dataReserva,horaFim,horaInicio)
+        removido.removerReserva;
+	 }
 }

@@ -11,8 +11,6 @@ public abstract class Membro {
 	
 //  fields
 	
-	
-	
 	private String nome;
     private String registro;
     private String endereco;
@@ -21,10 +19,6 @@ public abstract class Membro {
     
     protected TipoMembro tipo;
     private List <Emprestimo> historico;
-    
-    
-    
-   
     
 //  constructor
     public Membro(String nome, String registro,String endereco,String contato,String dataRegistro) {
