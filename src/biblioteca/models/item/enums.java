@@ -1,3 +1,7 @@
+package biblioteca.models.item;
+
+
+
 enum Status {
     disponivel,reservado,emprestado
 }

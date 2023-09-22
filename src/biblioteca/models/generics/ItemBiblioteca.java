@@ -1,22 +1,26 @@
 package biblioteca.models.generics;
-import models.enums;
+
+import biblioteca.models.*;
+import biblioteca.models.item.Status;
+
+
 
 public class ItemBiblioteca<T> {
     
-    //	Atributos
+    //	fields
     private T item;
     private String titulo;
     private int id;
     private Status status;
 
-    // Construtor
+    // Constructor
     public ItemBiblioteca(T item,String titulo,int id, Status status) {
         this.item = item;
         this.titulo = titulo;
         this.id = id;
         this.status = status;
     }
-    // Métodos
+    // Methods
     public void emprestar () {
         if (status == Status.disponivel) {
             System.out.println("O item" + item.toString() + "está disponível para empréstimo");

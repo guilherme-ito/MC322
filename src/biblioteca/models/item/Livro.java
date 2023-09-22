@@ -1,3 +1,7 @@
+package biblioteca.models.item;
+
+import biblioteca.models.generics.ItemBiblioteca;
+
 public class Livro extends ItemBiblioteca<Livro> {
     
     private String autor;

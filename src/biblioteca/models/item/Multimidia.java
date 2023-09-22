@@ -1,3 +1,5 @@
+import biblioteca.models.generics.ItemBiblioteca;
+
 public class Multimidia extends ItemBiblioteca<Multimidia> {
 
     private Formato formato;

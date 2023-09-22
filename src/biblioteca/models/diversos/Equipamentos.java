@@ -1,4 +1,6 @@
-public class Equipamento extends ItemBiblioteca<Equipamento> {
+import biblioteca.models.generics.ItemBiblioteca;
+
+public class Equipamentos extends ItemBiblioteca<Equipamento> {
     
 	// Atributos
 	private Tipo tipo;

@@ -12,23 +12,23 @@ public class ListaEmprestimos<T> {
     // Construtores
     public ListaEmprestimos(String dataEmprestimo, String dataDevolucao) {
         listaItens = new LinkedList<>();
-        this.dataEmprestimo = dataEmprestimo
+        this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }
 
     //Métodos
     public void adicionarItem() {
-        listaItens.add(T ItemBiblioteca)
+        listaItens.add(T ItemBiblioteca);
     }
 
     public void removerItem() {
-        listaItens.remove(T ItemBiblioteca)
+        listaItens.remove(T ItemBiblioteca);
     }
 
     public List<T> listarItensEmprestados() {
-        if listaItens = null {
+        if (listaItens == null) {
             System.out.println ("Não há itens emprestados")
-            return 0;
+            return null;
         }
         else {
             return listaItens;
