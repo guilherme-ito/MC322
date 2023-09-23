@@ -1,48 +1,49 @@
 package biblioteca.models.generics;
+import java.util.ArrayList;
+import java.util.List;
+import biblioteca.models.item.ItemMultimidia;
+import java.util.LinkedList;
 
-import biblioteca.models.*;
-import biblioteca.models.item.Status;
-
-
-
-public class ItemBiblioteca<T> {
+public class ItemBiblioteca<T extends ItemMultimidia> {
     
-    //	fields
-    private T item;
-    private String titulo;
-    private int id;
-    private Status status;
+    //Atributos
+    private List<T> itensReservados;
+    private List<T> itensEmprestados;
+    private int numeroDeItensEmprestados;
+    private int numeroDeItensReservados;
 
-    // Constructor
-    public ItemBiblioteca(T item,String titulo,int id, Status status) {
-        this.item = item;
-        this.titulo = titulo;
-        this.id = id;
-        this.status = status;
+    // Construtores
+    public ItemBiblioteca() {
+        this.itensReservados = new ArrayList<>();
+        this.itensEmprestados = new LinkedList<>();
+        this.numeroDeItensEmprestados = 0;
+        this.numeroDeItensReservados = 0;
     }
+
     // Methods
-    public void emprestar () {
-        if (status == Status.disponivel) {
-            System.out.println("O item" + item.toString() + "está disponível para empréstimo");
-            status = Status.emprestado;
-        } 
-        if (status == Status.emprestado) {
-            System.out.println("O item" + item.toString() + "está emprestado ");
-        }
-        if (status == Status.reservado) {
-            System.out.println("O item" + item.toString() + "está reservado");
-        }
+    public void reservar (T ItemMultimidia) {
+        itensReservados.add(ItemMultimidia);
+        numeroDeItensReservados ++;
     }
 
-    public void devolver () {
-        if (status != Status.reservado) {
-        status = Status.disponivel;
+    public void emprestar (T ItemMultimidia) {
+        itensEmprestados.add(ItemMultimidia);
+        numeroDeItensEmprestados ++;
+        
+        if (itensReservados.contains(ItemMultimidia)) {
+            itensReservados.remove(ItemMultimidia);
+            numeroDeItensReservados --;
         }
+            
     }
 
-    public void reservar () {
-        if (status != Status.reservado) {
-            status = Status.reservado;
+    public void devolverItem(T ItemMultimidia) {
+        if (itensEmprestados.contains(ItemMultimidia)) {
+            itensEmprestados.remove(ItemMultimidia);
+            numeroDeItensEmprestados--;
+
+        } else {
+            System.out.println("O item não está emprestado, portanto não pode ser devolvido.");
         }
     }
 

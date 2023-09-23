@@ -1,6 +1,6 @@
 package biblioteca.models.item;
 
-public class CD extends Item {
+public class CD extends ItemMultimidia {
 
 //	fields
 	private String faixas;//lista
@@ -13,13 +13,9 @@ public class CD extends Item {
 //	constructor
 	public CD(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
 			String sinopse,String capa,String classificacao,int id,
-			String faixas, String duracao,int exemplares, String conservacao) {
+			Status status) {
 		
-		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id);
-		this.faixas=faixas;
-		this.duracao=duracao;
-		this.exemplares=exemplares;
-		this.conservacao=conservacao;
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id,status);
 		
 	}
 	

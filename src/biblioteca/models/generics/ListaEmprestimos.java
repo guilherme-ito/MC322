@@ -1,37 +1,35 @@
+package biblioteca.models.generics;
 import java.util.LinkedList;
 import java.util.List;
-import biblioteca.models.generics.ItemBiblioteca;
+import biblioteca.models.item.ItemMultimidia;
 
-public class ListaEmprestimos<T> {
-
+public class ListaEmprestimos<T extends ItemMultimidia> {
     // Atributos
-    private List<T> listaItens;
-    private String dataEmprestimo;
-    private String dataDevolucao;
-    
+    private List<T> listaEmprestimos;
+
     // Construtores
-    public ListaEmprestimos(String dataEmprestimo, String dataDevolucao) {
-        listaItens = new LinkedList<>();
-        this.dataEmprestimo = dataEmprestimo;
-        this.dataDevolucao = dataDevolucao;
+    public ListaEmprestimos() {
+        listaEmprestimos = new LinkedList<>();
     }
 
     //Métodos
-    public void adicionarItem() {
-        listaItens.add(T ItemBiblioteca);
+    public void adicionarItem(T ItemMultimidia) {
+        listaEmprestimos.add(ItemMultimidia);
     }
 
-    public void removerItem() {
-        listaItens.remove(T ItemBiblioteca);
+    public void removerItem(T ItemMultimidia) {
+        listaEmprestimos.remove(ItemMultimidia);
     }
 
-    public List<T> listarItensEmprestados() {
-        if (listaItens == null) {
-            System.out.println ("Não há itens emprestados")
-            return null;
+    public void listarItensEmprestados (List<T> listaEmprestimos) {
+    if (listaEmprestimos.isEmpty()) {
+        System.out.println("Não há nenhuma empréstimo");
+    }
+    else {
+        System.out.println("A lista de empréstimo é");
+        for (T ItemMultimidia : listaEmprestimos) {
+            System.out.println(ItemMultimidia.toString());
         }
-        else {
-            return listaItens;
-        }
+    }
     }
 }

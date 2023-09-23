@@ -1,41 +1,35 @@
+package biblioteca.models.generics;
 import java.util.ArrayList;
 import java.util.List;
-import biblioteca.models.generics.ReservaBiblioteca;
+import biblioteca.models.diversos.ReservaBiblioteca;
 
-public class ListaReservas<T> {
-    
-    // Atributos
+public class ListaReservas<T extends ReservaBiblioteca> {
     private List<T> listaReservas;
-    private String dataReserva;
-    private String horaInicio;
-    private String horaFim;
 
-    // Construtores
-    public ListaReservas (String dataReserva, String horaInicio, String horaFim) {
-        listaReservas = new ArrayList<>();
-        this.horaInicio = horaInicio;
-        this.horaFim = horaFim;
+    public ListaReservas() {
+        this.listaReservas = new ArrayList<>();
     }
 
     // Métodos
-
-    public void adicionarReserva () {
-        listaReservas.add(T ReservaBiblioteca)    
+    public void adicionarReserva (T ReservaBiblioteca) {
+            listaReservas.add(ReservaBiblioteca);
     }
 
-    public void removerReserva () {
-        listaReservas.remove(T ReservaBiblioteca)
+        public void removerItem(T ReservaBiblioteca) {
+            listaReservas.remove(ReservaBiblioteca);
     }
 
-    public List<T> listarReservas () {
-        if listaReservas = null {
-            System.out.println ("Não há nenhuma reserva")
-            return 0;
+    public void listarItensReservados (List<T> listaEmprestimos) {
+    if (listaEmprestimos.isEmpty()) {
+        System.out.println("Não há nenhuma reserva feita");
+    }
+    else {
+        for (T Reserva : listaReservas) {
+            System.out.println("A lista de reserva é");
+            System.out.println(Reserva.toString());
         }
-        else {
-            return listaReservas;
-        }
     }
+}
 }
     
 

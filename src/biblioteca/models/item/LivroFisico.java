@@ -1,6 +1,6 @@
 package biblioteca.models.item;
 
-public class LivroFisico extends Item {
+public class LivroFisico extends ItemMultimidia {
 
     //fields
 	private String autor;
@@ -17,9 +17,10 @@ public class LivroFisico extends Item {
     //constructor
     public LivroFisico(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
     		String sinopse,String capa,String classificacao,int id,
-    		String autor,String editora,int edicao,int paginas,int exemplares, String isbn, String conservacao, String localizacao) {
+    		String autor,String editora,int edicao,int paginas,int exemplares, String isbn,
+            Status status, String conservacao, String localizacao) {
     	
-		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id);
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id,status);
 		this.autor=autor;
 		this.edicao=edicao;
 		this.editora=editora;

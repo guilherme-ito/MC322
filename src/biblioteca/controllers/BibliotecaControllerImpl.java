@@ -15,8 +15,8 @@ import biblioteca.models.item .*;
 public class BibliotecaControllerImpl implements BibliotecaController {
 	
 //	fields
-    private List<Item> itens;
-    private Map<Integer,Item> mapaItens;
+    private List<ItemMultimidia> itens;
+    private Map<Integer,ItemMultimidia> mapaItens;
     private Set<Emprestimo> emprestimos;
     
     Scanner scanner = new Scanner(System.in);
@@ -102,10 +102,10 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     }
 
     @Override
-    public List<Item> consultarItensDisponiveis() {
-    	for (Map.Entry<Integer, Item> entry : mapaItens.entrySet()) {
+    public List<ItemMultimidia> consultarItensDisponiveis() {
+    	for (Map.Entry<Integer, ItemMultimidia> entry : mapaItens.entrySet()) {
     	    Integer chave = entry.getKey();
-    	    Item valor = entry.getValue();
+    	    ItemMultimidia valor = entry.getValue();
     	    if(valor.isDisponivel()) {
     	    	itens.add(valor);   	   
     	   	}
@@ -115,7 +115,7 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     }
 
     @Override
-    public boolean emprestarItem(Membro membro, Item item) {
+    public boolean emprestarItem(Membro membro, ItemMultimidia item) {
        if (item.isDisponivel()) {
     	   item.setDisponivel(false);
        }
@@ -126,7 +126,7 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     }
 
     @Override
-    public boolean devolverItem(Membro membro, Item item) {
+    public boolean devolverItem(Membro membro, ItemMultimidia item) {
         item.setDisponivel(true);
         return true;
     }

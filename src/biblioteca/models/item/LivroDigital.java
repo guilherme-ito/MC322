@@ -1,6 +1,6 @@
 package biblioteca.models.item;
 
-public class LivroDigital extends Item {//talvez seja bom criar um pai dos dois livros
+public class LivroDigital extends ItemMultimidia {//talvez seja bom criar um pai dos dois livros
 
 //	fields
 	private String autor;
@@ -18,9 +18,9 @@ public class LivroDigital extends Item {//talvez seja bom criar um pai dos dois 
     public LivroDigital(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
     		String sinopse,String capa, String classificacao,int id,
     		String autor,int edicao,int paginas,int tamanhoArquivo,String formato,int numLicencas,String urlAcesso,
-    		String reqLeitura) {
+    		String reqLeitura,Status status) {
     	
-		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao, id);
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao, id,status);
 		this.autor=autor;
 		this.edicao=edicao;
 		this.paginas=paginas;
@@ -29,6 +29,7 @@ public class LivroDigital extends Item {//talvez seja bom criar um pai dos dois 
 		this.numLicencas=numLicencas;
 		this.urlAcesso=urlAcesso;
 		this.reqLeitura=reqLeitura;
+    
 		
 	}
 

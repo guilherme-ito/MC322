@@ -1,5 +1,5 @@
 package biblioteca.models.emprestimo;
-import biblioteca.models.item.Item;
+import biblioteca.models.item.ItemMultimidia;
 
     
 public class Emprestimo {
@@ -29,7 +29,8 @@ public class Emprestimo {
 	
 	public String getDataEmprestimo () {
 		return dataEmprestimo;
-	}	public int getLimite() {
+	}
+	public int getLimite() {
         return limite;
     }
 

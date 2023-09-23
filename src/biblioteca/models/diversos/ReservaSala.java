@@ -3,14 +3,15 @@ package biblioteca.models.diversos;
 import java.util.HashMap;
 import java.util.Map ;
 
-public class ReservaSala {
+public class ReservaSala extends ReservaBiblioteca{
 //	fields
-	
-	private String dataReserva;
-	private String horaInicio;
-	private String horaFim;         //getters e setters?
+	private String num_sala;         //getters e setters?
 	
 //	inner classes
+	public ReservaSala (String num_sala, String dataReserva, String horaFim, String horaInicio) {
+		super(dataReserva,horaInicio,horaFim);
+		this.num_sala = num_sala;	
+	}
 	
 	public class SalaIndividual{
 		//fields

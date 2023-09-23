@@ -2,12 +2,18 @@ package main;
 
 import biblioteca.controllers.*;
 import biblioteca.models.*;
+import biblioteca.models.generics.ListaEmprestimos;
 import biblioteca.views.*;
+import biblioteca.models.generics.ItemBiblioteca;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class BibliotecaMain {
+    ListaEmprestimos<T> listaEmprestimos = new ListaEmprestimos<>();
+    ItemMultimidia CD1 = new ItemMultimidia("Morning Glory","Inglês","Brit-Pop",1995,true,"Música","álbum","+10 anos",12838,"DISPONIVEL")
+
     private static BibliotecaController bibliotecaController;
     private static MembroController membroController;
 //    private static RelatorioController relatorioController;

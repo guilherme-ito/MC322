@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public abstract class Item {
+public abstract class ItemMultimidia {
 	
 //	fields
 	private String titulo;
@@ -20,14 +20,15 @@ public abstract class Item {
 	private String classificacao;
 	private int id;
 	private List<Comentario> comentariosItem;
-	
+	private Status status;
+
 	Scanner scanner = new Scanner(System.in);
 	
 //	lista de espera pro item
 	
 //	constructor
-	public Item(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
-			String sinopse,String capa, String classificacao, int id) {
+	public ItemMultimidia(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
+			String sinopse,String capa, String classificacao, int id,Status status) {
 		this.titulo=titulo;
 		this.idioma=idioma;
 		this.genero=genero;
@@ -38,6 +39,7 @@ public abstract class Item {
 		this.classificacao=classificacao;
 		this.id=id;
 		comentariosItem= new ArrayList<>();
+		this.status = status;
 	}
 	
 //	methods
@@ -54,7 +56,10 @@ public abstract class Item {
 	 public String getTitulo() {
 	        return titulo;
 	    }
-
+		
+		public Status getStatus() {
+			return status;
+		}
 	   
 
 	    public String getIdioma() {
@@ -125,5 +130,8 @@ public abstract class Item {
 	    public void setId(int novoId) {
 	        id = novoId;
 	    }
-	
+
+		enum Status{
+			DISPONIVEL,EMPRESTADO,RESERVADO
+		}
 }

@@ -1,6 +1,6 @@
 package biblioteca.models.item;
 
-public class DVD extends Item{
+public class DVD extends ItemMultimidia{
 
 //	fields
 	
@@ -15,10 +15,10 @@ public class DVD extends Item{
 //	constructor
 	public DVD(String titulo,String idioma,String genero,int lancamento,boolean disponivel,
 			String sinopse,String capa, String classificacao,int id,
-			String elenco,String duracao,int exemplares,String conservacao, String legendaAudio) {
+			String elenco,String duracao,int exemplares,String conservacao, String legendaAudio,
+            Status status) {
 		
-		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id);
-		
+		super(titulo,idioma,genero,lancamento,disponivel,sinopse,capa,classificacao,id, status);
 		this.elenco=elenco;
 		this.duracao=duracao;
 		this.exemplares=exemplares;

@@ -1,7 +1,7 @@
 package biblioteca.models.allMembros;
 
 import biblioteca.models.emprestimo.Emprestimo;
-import biblioteca.models.item.Item;
+import biblioteca.models.item.ItemMultimidia;
 import java.util.ArrayList;
 import java.util.List;
 
