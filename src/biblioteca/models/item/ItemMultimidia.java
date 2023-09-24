@@ -47,6 +47,10 @@ public abstract class ItemMultimidia {
 	
 //	methods
 	
+	public ItemMultimidia(String titulo2, String idioma2, String genero2, int lancamento2, boolean disponivel,
+			String sinopse2, String capa2, String classificacao2, int id2, Status status2) {
+	}
+
 	public void adcComentario(Scanner scanner) {
 		
 		int membroId=scanner.nextInt();

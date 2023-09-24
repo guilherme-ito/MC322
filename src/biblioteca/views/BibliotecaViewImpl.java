@@ -3,7 +3,7 @@ package biblioteca.views;
 
 import java.util.List;
 
-import biblioteca.controllers.BibliotecaController;
+/*import biblioteca.controllers.BibliotecaController;
 import biblioteca.models.item.ItemMultimidia;
 
 public class BibliotecaViewImpl implements BibliotecaView {

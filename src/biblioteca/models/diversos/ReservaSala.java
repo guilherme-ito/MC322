@@ -51,7 +51,7 @@ public class ReservaSala extends ReservaBiblioteca{
 				throw new ReservandoSala(numSala,2);
 			}
 			if(this.status==StatusSala.OCUPADA) {
-				throws new ReservandoSala(numSala,1);
+				throw new ReservandoSala(numSala,1);
 			}
 				
 		} catch (ReservandoSala a) {

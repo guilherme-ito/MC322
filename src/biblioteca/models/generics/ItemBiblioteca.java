@@ -54,9 +54,9 @@ public class ItemBiblioteca<T extends ItemMultimidia> {
             if (!membro.getListaEmprestados().contains(ItemMultimidia)) {
                 throw new DevolucaoFalhaException("O item não está emprestado para ser devolvido");
             }    
-            if (ItemMultimidia.getEstado() = "PÉSSIMO") {
-                throw new DevolucaoFalhaException("O item está muito danificado e precisa ser levado à manutenção");
-            }
+            //if (ItemMultimidia.getEstado() = "PÉSSIMO") {
+                //throw new DevolucaoFalhaException("O item está muito danificado e precisa ser levado à manutenção");
+            //}
         } catch (DevolucaoFalhaException e) {
             System.err.println("Erro ao devolver o livro" +e.getMessage());
         }    
