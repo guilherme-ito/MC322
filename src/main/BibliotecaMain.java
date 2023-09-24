@@ -1,6 +1,6 @@
 package main;
 
-import biblioteca.controllers.*;
+/*import biblioteca.controllers.*;
 import biblioteca.models.*;
 import biblioteca.models.generics.ListaEmprestimos;
 import biblioteca.models.item.CD;
@@ -12,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-/*public class BibliotecaMain {
+public class BibliotecaMain {
     ListaEmprestimos<ItemMultimidia> listaEmprestimos = new ListaEmprestimos<ItemMultimidia>();
     CD CD1 = new CD("Morning Glory","Inglês","Brit-Pop",1995,true,"Música","álbum","+10 anos",12838,"DISPONIVEL");
     
