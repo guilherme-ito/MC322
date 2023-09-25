@@ -21,6 +21,7 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     private Map<Integer,Item> mapaItens;
     private Set<Emprestimo> emprestimos;
     private List<Reserva> reservas;
+    private Set<Categoria> categorias;
     
     Scanner scanner = new Scanner(System.in);
     
@@ -35,16 +36,18 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     
 //    methods
     
+    
+//    adc reserva
     public boolean adcReserva() {
     	return true;
     }
+    
+//    remove a reserva
     public boolean removerReserva() {
     	return true;
     }
     
-    
-    
-    
+      
     public boolean adcEmprestimo(Membro usuario,Item recurso,Funcionario  emprestador,String dataEmprestimo,String dataDevolucao) {
     	
     	for(Emprestimo emprestimo:emprestimos) {
@@ -58,6 +61,8 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     	System.out.println("emprestimo realizado com sucesso");
     	return true;
     }
+    
+//    retorna o emprestimo
     public boolean retornarEmprestimo(int id) {
     	for(Emprestimo emprestimo:emprestimos) {
     		if(emprestimo.getRecurso().getId()==id) {
@@ -69,7 +74,7 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     	System.out.println("Esse item não está emprestado");
     	return false;
     }
-    
+//    adc item ao map de (id,itens)
     public void adcItemId(Scanner scanner) {
     	System.out.println("digite os atributos do item");
     	int id= scanner.nextInt();
@@ -140,7 +145,8 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     }
     	
     }
-
+    
+//   adc os itens disponíveis a uma lista
     @Override
     public List<Item> consultarItensDisponiveis() {
     	for (Map.Entry<Integer, Item> entry : mapaItens.entrySet()) {
@@ -153,7 +159,7 @@ public class BibliotecaControllerImpl implements BibliotecaController {
     	}
         return itens;
     }
-
+//    empresta item a um membro
     @Override
     public boolean emprestarItem(Membro membro, Item item) {
        if (item.isDisponivel()) {
@@ -164,7 +170,8 @@ public class BibliotecaControllerImpl implements BibliotecaController {
        }
         return true;
     }
-
+    
+//    devolve o item 
     @Override
     public boolean devolverItem(Membro membro, Item item) {
         item.setDisponivel(true);
