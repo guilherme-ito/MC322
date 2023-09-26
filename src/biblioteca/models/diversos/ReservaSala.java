@@ -38,7 +38,7 @@ public class ReservaSala extends ReservaBiblioteca{
 		        equipDisp.put("fone", 6); 
 	}
 	
-	enum StatusReserva{
+	enum StatusReserva {
 		PENDENTE,CONFIRMADA,CANCELADA
 	}
 	
