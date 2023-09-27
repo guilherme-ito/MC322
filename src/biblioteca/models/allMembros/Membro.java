@@ -16,18 +16,21 @@ public abstract class Membro {
     private String endereco;
     private String contato;
     private String dataRegistro;
-    
+    private int quantidadeItensEmprestados;
+    private int limiteQuantidadeEmprestimos;
     protected TipoMembro tipo;
     private List <Emprestimo> historico;
+    private List <ItemMultimidia> listaemprestados;
     
 //  constructor
     public Membro(String nome, String registro,String endereco,String contato,String dataRegistro) {
         this.nome = nome;
         this.registro = registro;
-        this.endereco=endereco;
-        this.contato=contato;
-        this.dataRegistro=dataRegistro;
-        historico=new ArrayList<>();
+        this.endereco = endereco;
+        this.contato = contato;
+        this.dataRegistro = dataRegistro;
+        historico = new ArrayList<>();
+        quantidadeItensEmprestados = 0;
         
     }
     
@@ -61,6 +64,18 @@ public abstract class Membro {
         return tipo;
     }//n tem setters pq é imutavel??sla
 
+    public int getLimiteQuantidadeEmprestimos() {
+        return limiteQuantidadeEmprestimos;
+    }
+
+    public int getQuantidadeItensEmprestados() {
+        return quantidadeItensEmprestados;
+    }
+
+    public List getListaEmprestados () {
+        return listaemprestados;
+
+    }
 
    
 //  setters
@@ -84,6 +99,13 @@ public abstract class Membro {
     public void setTipo(TipoMembro novoTipo) {
         this.tipo = novoTipo;
     }
-   
+
+    public void setLimiteQuantidadeEmprestimos (int limiteQuantidadeEmprestimos) {
+        this.limiteQuantidadeEmprestimos = limiteQuantidadeEmprestimos;
+    }
+    
+    public void set(List listaemprestados) {
+        this.listaemprestados = listaemprestados;
+    }
     
 }
