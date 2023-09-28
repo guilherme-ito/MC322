@@ -2,15 +2,20 @@ package biblioteca.models.diversos;
 
 import java.util.HashMap;
 import java.util.Map ;
+ 
+import biblioteca.models.exceptions.ReservandoSala;
 
 public class ReservaSala extends ReservaBiblioteca{
 //	fields
-	private String num_sala;         //getters e setters?
-	
+	private String numSala;         //getters e setters?
+	private StatusReserva reserva;
+	private StatusSala status;
+	private int usuariosPresentes;
+	private int capcMax;
 //	inner classes
-	public ReservaSala (String num_sala, String dataReserva, String horaFim, String horaInicio) {
+	public ReservaSala (String numSala, String dataReserva, String horaFim, String horaInicio) {
 		super(dataReserva,horaInicio,horaFim);
-		this.num_sala = num_sala;	
+		this.numSala = numSala;	
 	}
 	
 	public class SalaIndividual{
@@ -37,10 +42,32 @@ public class ReservaSala extends ReservaBiblioteca{
 		        equipDisp.put("teclado", 7);
 		        equipDisp.put("fone", 6); 
 	}
+//		 methods
+	
+	}
+	public boolean ReservarSala() {
+		try {
+			if (this.usuariosPresentes==capcMax) {
+				throw new ReservandoSala(numSala,2);
+			}
+			if(this.status==StatusSala.OCUPADA) {
+				throws new ReservandoSala(numSala,1);
+			}
+				
+		} catch (ReservandoSala a) {
+			System.out.println("Ocorreu um erro");
+			a.printStackTrace();
+			a.getMessage();
+			
+		}
+		
+		return false;
+	}
 	
 	enum StatusReserva {
 		PENDENTE,CONFIRMADA,CANCELADA
 	}
-	
+	enum StatusSala {
+		OCUPADA,LIVRE
 	}
 }
