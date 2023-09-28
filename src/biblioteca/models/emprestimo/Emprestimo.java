@@ -1,5 +1,4 @@
 package biblioteca.models.emprestimo;
-import biblioteca.models.item.ItemMultimidia;
 
     
 public class Emprestimo {
@@ -51,7 +50,8 @@ public class Emprestimo {
 	
 	public void setData_emprestimo(String data_emprestimo) {
 		this.dataEmprestimo = dataEmprestimo;
-		}
+	}
+    
 	public void setLimite(int limite) {
         this.limite = limite;
     }
@@ -62,8 +62,6 @@ public class Emprestimo {
 
     public void setMulta(int multa) {
         this.multa = multa;
-    }
-	
-	
+    }	
 
 }
