@@ -55,7 +55,7 @@ public class BibliotecaMain {
                 case 2:
                     // Menu de Gerenciamento de Membros
                     menuGerenciamentoMembros(scanner, membroView);
-                    break;
+                    break;v  a
                 case 3:
                     // Menu de Geração de Relatórios e Estatísticas
 //                    menuRelatoriosEstatisticas(scanner, relatorioView);
